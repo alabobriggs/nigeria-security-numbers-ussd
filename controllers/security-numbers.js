@@ -166,7 +166,7 @@ exports.getNumbers = async (req, res, next) => {
     };
 
     const getSpecificStateNumbers = () => {
-      return stateNumbers[text].phones
+      return stateNumbers[parseInt(text, 10) - 1].phones
         .map(
           (number) => `${number}
         `
@@ -180,7 +180,7 @@ exports.getNumbers = async (req, res, next) => {
       ${getAllStateNames()}`;
     } else {
       response = `END Below are the security numbers at ${
-        stateNumbers[text].state
+        stateNumbers[parseInt(text, 10) - 1].state
       };
       ${getSpecificStateNumbers()}`;
     }
