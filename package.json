@@ -1,0 +1,64 @@
+{
+  "name": "nigeria-security-numbers-ussd",
+  "version": "1.0.0",
+  "description": "USSD code to get all Nigerian states security numbers",
+  "main": "index.js",
+  "dependencies": {
+    "africastalking": "^0.4.5",
+    "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "method-override": "^3.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-config-node": "^4.0.0",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react-hooks": "^2.5.1",
+    "prettier": "^2.0.2",
+    "commitizen": "^4.0.3",
+    "cz-conventional-changelog": "^3.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js",
+    "start": "node index.js",
+    "commit": "git-cz",
+    "analyze:lint": "eslint --ext .jsx --ext .js .",
+    "analyze:prettier": "prettier --list-different '**/*.{js,md,json}'",
+    "analyze": "npm run analyze:lint && npm run analyze:prettier",
+    "fix:lint": "eslint --ext .js . --fix",
+    "fix:prettier": "prettier --write '**/*.{js,md,json}'",
+    "fix": "npm run fix:lint && npm run fix:prettier"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "author": "alabobriggs",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alabobriggs/nigeria-security-numbers-ussd.git"
+  },
+  "bugs": {
+    "url": "https://github.com/alabobriggs/nigeria-security-numbers-ussd/issues"
+  },
+  "homepage": "https://github.com/alabobriggs/nigeria-security-numbers-ussd#readme",
+  "keywords": [
+    "ussd",
+    "afritalking"
+  ],
+  "directories": {
+    "doc": "docs"
+  }
+}
